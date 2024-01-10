@@ -1,11 +1,14 @@
 package br.com.ada.pooii.aula01;
 
-import java.io.Serializable;
+import br.com.ada.pooii.domain.Gerente;
+import br.com.ada.pooii.domain.Vendedor;
 
 public class Main {
     public static void main(String[] args) {
 
-        Vendedor vendedor = new Vendedor("jorge", 1000);
+        // checked and unchecked exceptions in java
+
+        Vendedor vendedor = new Vendedor("igor", 1000);
         Gerente gerente = new Gerente("maria", 2000);
 
         autentica(vendedor, vendedor.getSenha());

@@ -1,5 +1,7 @@
 package br.com.ada.pooii.aula01;
 
+import br.com.ada.pooii.domain.Gerente;
+
 import java.util.*;
 
 public class Main2 {

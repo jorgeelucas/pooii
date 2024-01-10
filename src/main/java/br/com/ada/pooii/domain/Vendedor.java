@@ -1,4 +1,6 @@
-package br.com.ada.pooii.aula01;
+package br.com.ada.pooii.domain;
+
+import br.com.ada.pooii.aula01.Autentica;
 
 public class Vendedor extends Funcionario implements Autentica {
 

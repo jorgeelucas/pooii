@@ -2,6 +2,8 @@ package br.com.ada.pooii.aula01;
 
 public interface Autentica {
 
+    Integer TAMANHO_MAX_SENHA = 8;
+
     boolean autentica(String senha);
 
     // default
@@ -9,10 +11,12 @@ public interface Autentica {
         return autenticaPrivate(senha);
     }
 
+    // static
     static boolean autenticaStatico(String senha) {
         return senha.equals("123");
     }
 
+    // private
     private boolean autenticaPrivate(String senha) {
         return senha.equals("123");
     }
