@@ -30,3 +30,9 @@ System.out.println("A lista contém a pessoa maria? " + listaDeNomes.contem(mari
 System.out.println("Qual a posicao do elemento de ID 3? " + listaDeNomes.indice(3)); // Saída: 2
 
 ```
+
+## Objeto Pessoa
+
+```java
+public record Pessoa(long id, String nome) {}
+```
