@@ -7,4 +7,5 @@ public interface RepositorioSomenteLeitura<T, U> {
     List<T> buscarTodos();
 
     T buscarPorId(U id);
+
 }
