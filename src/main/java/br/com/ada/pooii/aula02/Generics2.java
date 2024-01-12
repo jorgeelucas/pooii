@@ -40,8 +40,6 @@ public class Generics2 {
 
         salvarObj(cRepo, cliente);
 
-        List
-
     }
 
     public static void salvarObj(Repositorio repo, Cliente cliente) {
