@@ -4,9 +4,25 @@ _Este é o meu resumo sobre o conceito de `Casting` do Java._
 
 Em Java, usamos o conceito de _`Casting`_ quando desejamos converter um tipo de dado em outro tipo. Existem dois tipos de Casting: o Implícito e o Explícito.
 
-## Casting implicito
+## Casting implícito
 
-O Casting implícito ocorre quando o próprio Java realiza a conversão automaticamente. Por exemplo:
+> O Casting implícito ocorre quando o próprio Java realiza a conversão automaticamente. Por exemplo:
+
+
+**_Exemplo_**
+```java
+
+double d1 = 4; // int -> double
+double d2 = 5.7f; // float -> double
+long l1 = 100; // int -> long
+
+```
+
+Nesse exemplo, não precisamos informar ao Java sobre o _casting_ porque não há perda de dados ou precisão pois:
+* O tamanho de um _`double`_ é maior que _`int`_
+* O tamanho de um _`double`_ é maior que _`float`_
+* O tamanho de um _`long`_ é maior que um _`int`_
+* 
 
 **_Declarando e atribuindo variaveis_**
 ```java
@@ -55,13 +71,42 @@ O Casting explícito ocorre quando precisamos realizar uma conversão que não �
 
 Para realizar o Casting explícito, utilizamos a sintaxe `(tipoDestino) valor`, onde `tipoDestino` é o tipo para o qual desejamos converter o valor. Por exemplo:
 
-**_Transformando um valor do tipo `double` em `int` ciente da perda de dados_**
+**_Transformando um valor do tipo em outro tipo primitivo_**
 ```java
-double numeroDecimal = 123.45;
-int numeroInteiro = (int) numeroDecimal;
-System.out.println(numeroInteiro); // 123
+//Conversão do double 5.0 para float.
+float a  = (float) 5.0;
+System.out.println(a); // 5.0
+
+//Conversão de double para int.
+int b = (int) 5.1987;
+System.out.println(b);
+
+//Conversão de int para float é implícito, não precisa de casting.
+float c = 100;
+System.out.println(c); // 100.0
+
+//Conversão de char para int é implícito, não precisa de casting.
+int d = 'd';
+System.out.println(d); // 100
 ```
 
-Neste caso, estamos convertendo explicitamente um número decimal em um número inteiro, e a parte decimal é truncada, resultando em perda de informações.
+No caso do _`double`_ para _`int`_, estamos convertendo explicitamente um número **decimal** em um número **inteiro**, e a parte decimal é truncada (perdida), resultando em perda de informações e o valor de b vai ser 5
 
 > É importante usar o Casting explícito com cautela, garantindo que a conversão seja apropriada para o contexto e que não cause perdas indesejadas de dados.
+
+### Casting automáticos
+
+Quando fazer uma simples operação como:
+
+```java
+double resultado = 32.5 + 8; // 40.5
+```
+
+O Java vai, automáticamente, fazer o casting do segundo parametro (8) para double pois toda operação aritmética deve ser feita em valores do mesmo tipo;
+
+* **32.5 + 8.0** vai ser calculado e salvo em `resultado`
+
+```java
+double resultado = 32.5 + (double) 8;
+```
+
