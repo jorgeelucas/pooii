@@ -185,3 +185,29 @@ Integer maior = Util.<Integer>encontrarMaiorElemento(nrs); // 15
 // podemos usar type inference para invocar omitindo o tipo
 Integer maiorTY = Util.encontrarMaiorElemento(nrs); // 15
 ```
+
+# @SuppressWarnings("unchecked")
+
+Quando temos certeza que é uma conversão segura, porém mesmo assim o compilador continua emitindo um alerta.
+
+Podemos remover esse warning com a anotação _@SuppressWarnings("unchecked")_
+
+**_Anotando para suprimir o alerta_**
+```java
+    @SuppressWarnings("unchecked")
+    public static void main(String[] args) {
+        List<String> lista = new ArrayList();
+
+        // Aviso gerado porque não especificamos o tipo na lista
+        lista.add("Exemplo");
+
+        // Suprimindo o aviso com @SuppressWarnings
+        List<String> outraLista = new ArrayList();
+        @SuppressWarnings("unchecked")
+        List<String> listaSuprimida = outraLista;
+
+        listaSuprimida.add("Suprimido");
+    }
+```
+
+Ela pode ser adicionada tanto em classes, métodos e variáveis - porém não é recomendado usá-la, se tiver que usar tentar sempre usar no menor escopo possível.
