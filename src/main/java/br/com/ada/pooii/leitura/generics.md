@@ -129,3 +129,59 @@ Impressora<Integer> impressora = new Impressora<>();
 Para instanciar podemos usar o _`new`_ normalmente como de costume, mas incluímos o tipo _`<Integer>`_ entre o nome da classe e o construtor.
 ```java
 Impressora<Integer> impressora = new Impressora<Integer>();
+```
+
+# Métodos genericos
+
+> São metodos que possuem seu próprio parametro de tipo, similar ao declarar um tipo (classe, interface) porém o tipo genérico só é válido no escopo do método. São permitidos em métodos estáticos e não estáticos e também construtores genéricos.
+
+A sua sintaxe é composta por uma lista de tipos de parametros, dentro de colchetes angulares `<>`, que aparece antes do tipo de retorno do método. Para métodos genéricos estáticos, a seção de parâmetros de tipo deve aparecer antes do tipo de retorno do método.
+
+**_Método genérico para trocar elementos em uma lista:_**
+
+```java
+public class Util {
+    public static <T> void swapElemento(List<T> lista, int indice1, int indice2) {
+        if (indice1 >= 0 && indice1 < lista.size() && indice2 >= 0 && indice2 < lista.size()) {
+            T temp = lista.get(indice1);
+            lista.set(indice1, lista.get(indice2));
+            lista.set(indice2, temp);
+        }
+    }
+}
+```
+
+**_Ainda podemos usar Recursive Type Bound quando o parâmetro de tipo é limitado por alguma expressão que envolve o próprio parâmetro de tipo._**
+
+```java
+// dentro da classe Util
+public static <T extends Comparable<T>> T encontrarMaiorElemento(List<T> lista) {
+        if (lista.isEmpty()) {
+            return null;
+        }
+
+        T maior = lista.get(0);
+        for (T elemento : lista) {
+            if (elemento.compareTo(maior) > 0) {
+                maior = elemento;
+            }
+        }
+        return maior;
+    }
+```
+
+Nosso método encontra o maior elemento em uma lista de objetos comparáveis.
+
+**_A sintaxe para invocar nosso método seria:_**
+```java
+List<Integer> nrs = new ArrayList<>();
+nrs.add(10);
+nrs.add(15);
+nrs.add(11);
+
+// invocando nosso metodo 
+Integer maior = Util.<Integer>encontrarMaiorElemento(nrs); // 15
+
+// podemos usar type inference para invocar omitindo o tipo
+Integer maiorTY = Util.encontrarMaiorElemento(nrs); // 15
+```
