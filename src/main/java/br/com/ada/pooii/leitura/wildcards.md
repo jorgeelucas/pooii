@@ -91,7 +91,7 @@ Com esse ajuste, estamos determinando que o método _somarListaDeNumeros_ aceite
 
 # 2. Lower Bounded Wildcards
 
-Um [upper bounded wildcard](#1-upper-bounded-wildcard) restringe o _tipo desconhecido_ para um tipo específico ou seus subtipos usando `extends`- de forma similar, um **lower bounded wildcard** restringe para um tipo específico e seus supertipos usando `super`
+Um [upper bounded wildcard](#1-upper-bounded-wildcards) restringe o _tipo desconhecido_ para um tipo específico ou seus subtipos usando `extends`- de forma similar, um **lower bounded wildcard** restringe para um tipo específico e seus supertipos usando `super`
 
 ```java
 List<? super Integer> lista;
