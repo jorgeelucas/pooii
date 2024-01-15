@@ -153,3 +153,34 @@ Isso é chamado uma **lista de tipos desconhecidos**.
 Segundo a [documentação da oracle](https://docs.oracle.com/javase/tutorial/java/generics/unboundedWildcards.html), existe dois cenários onde queremos usar `wildcards ilimitados`
 * Se estamos escrevendo um método que pode ser implementado usando apenas funcionalidades presentes na classe `Object`
 * Quando seu código não vai depender do tipo do parametro da lista, por exemplo: `List.size`, `List.clear`;
+
+**_Método para alternar dois elementos em uma lista_**
+```java
+public static void swap(List<?> lista, int de, int para) {
+ // ... omitindo validações dos indices
+
+ Object temporario = lista.get(de);
+ lista.set(de, lista.get(para));
+ lista.set(para, temporario);
+} 
+```
+
+Esse código nos gera um erro, um erro famoso quando trabalhamos com _wildcards_ `capture of`, isso acontece porque o compilador infere um tipo especial quando usamos _wildcards_ o tipo **_wildcard capture_** e quando tentamos incluir o tipo na minha lista generica, mesmo que seja o tipo buscado na própria lista, o compilador entende que não pode garantir que o objeto seja o mesmo e não temos _typesafety_.
+
+A solução para esse problema é usar um método _[helper](https://docs.oracle.com/javase/tutorial/java/generics/examples/WildcardFixed.java)_
+
+**_Solução com método helper_**
+```java
+public static void swap(List<?> lista, int de, int para) {
+ // ... omitindo validações dos indices
+
+ swapHelper(lista, de, para);
+}
+
+public static <T> void swapHelper(List<T> lista, int de, int para) {
+ // aqui temos certeza que o objeto é do mesmo tipo.
+ T temporario = lista.get(i);
+ lista.set(de, lista.get(j));
+ lista.set(para, temporario);
+}
+```
