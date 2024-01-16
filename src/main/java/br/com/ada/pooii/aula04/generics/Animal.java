@@ -1,6 +1,6 @@
 package br.com.ada.pooii.aula04.generics;
 
-public record Animal(String nome, double tamanho, int idade) implements Comparable<Animal> {
+public record Animal(String nome, double tamanho) implements Comparable<Animal> {
 
     @Override
     public int compareTo(Animal o) {
