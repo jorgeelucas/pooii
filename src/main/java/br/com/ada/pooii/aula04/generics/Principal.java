@@ -27,7 +27,7 @@ public class Principal {
         //Object[] arrayDeObjetos = new Long[10];
         //arrayDeObjetos[0] = "maria"; // ArrayStoreException
 
-        // invariante
+        // invariantes
         //ArrayList<Object> listaDeObjetos = new ArrayList<Long>();
 
     }

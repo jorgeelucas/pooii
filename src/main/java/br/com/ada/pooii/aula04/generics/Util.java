@@ -23,6 +23,7 @@ public class Util {
     }
 
     public static <T extends Comparable<T>> T encontrarMaiorElemento(List<T> lista) {
+        // poderiamos ainda adicionar mais restricoes com: <T extends Number & Comparable<T>>
         if (lista.isEmpty()) {
             return null;
         }
