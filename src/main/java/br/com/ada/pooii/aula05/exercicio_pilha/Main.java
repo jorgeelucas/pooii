@@ -1,9 +1,14 @@
 package br.com.ada.pooii.aula05.exercicio_pilha;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
         Stack<String> minhaStack = new StackImpl<>();
+
+        List<Object> todosOsElementos = new ArrayList<>();
 
         // PUSH
         System.out.println("PUSH");
@@ -32,5 +37,10 @@ public class Main {
         System.out.println("IS EMPTY");
         boolean empty = minhaStack.isEmpty();
         System.out.println(empty);
+
+        // TESTANDO TRANSFERENCIA
+//        minhaStack.transferirObjetos(todosOsElementos);
+
+        System.out.println(todosOsElementos);
     }
 }

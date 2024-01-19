@@ -39,7 +39,7 @@ interface Repositorio {
 class RepositoryOracle implements Repositorio {
 
     public RepositoryOracle(int porta, String conexao) {
-        System.out.println("Conectando no oracle: " porta + " " + conexao);
+        System.out.println("Conectando no oracle: " + porta + " " + conexao);
     }
     @Override
     public void salvar(Pagamento pagamento) {

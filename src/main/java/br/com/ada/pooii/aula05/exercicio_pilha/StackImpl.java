@@ -35,4 +35,10 @@ public class StackImpl<E> implements Stack<E> {
         return listaInterna.isEmpty();
     }
 
+    @Override
+    public void transferirObjetos(List<? super E> lista) {
+        for (E e : listaInterna)
+            lista.add(e);
+    }
+
 }
