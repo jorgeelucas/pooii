@@ -29,6 +29,7 @@ public class Main {
 
         System.out.println(ld2); // sera impresso em ISO pois eu so ensinei a receber no meu formato
 
+        // imprimindo
         String dataFormatada = ld2.format(formatador); // retornando a data no meu formato
         System.out.println("Data formatada: " + dataFormatada);
     }
