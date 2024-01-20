@@ -12,8 +12,20 @@ public class SolidMain {
 
         // --> Principio da Injecao de dependencia
 
-        // SRP
-        
+        // SRP -> exercicio
+        // OCP
+
+        Funcionario funcionariaErica = new Gerente("erica", 5000);
+        Funcionario funcionariaPaula = new Produto("paula", 2000);
+        Funcionario funcionariaAgata = new Almoxarifado("agata", 3200);
+
+        double bonusErica = funcionariaErica.calcularBonus();
+        double bonusPaula = funcionariaPaula.calcularBonus();
+        double bonusAgata = funcionariaAgata.calcularBonus();
+
+        System.out.println(bonusErica);
+        System.out.println(bonusPaula);
+        System.out.println(bonusAgata);
 
     }
 }
