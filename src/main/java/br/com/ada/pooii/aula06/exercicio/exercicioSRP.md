@@ -2,7 +2,7 @@
 
 **_Refatore a seguinte classe que está violando o princípio do SRP para termos classes mais coesas_**
 ```java
-public class Pedido {
+public class PedidoService {
     public double calcularTotalPedido() { /*...*/ }
     public List<Item> getItens() { /*...*/ }
     public long getQtdItens() { /*...*/ }
