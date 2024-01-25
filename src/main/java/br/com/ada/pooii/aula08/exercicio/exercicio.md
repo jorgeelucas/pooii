@@ -4,4 +4,4 @@
 * Crie classes `EconomicPrinter` e `AdvancedPrinter` implementando MultifunctionPrinter.
 
 ## Desafio
-**__Divida MultifunctionPrinter em interfaces menores como Printable, Scannable, Faxable, e Copyable.__**
+Divida **__MultifunctionPrinter__** em interfaces menores como **__Printable__**, **__Scannable__**, **__Faxable__**, e **__Copyable__**.
