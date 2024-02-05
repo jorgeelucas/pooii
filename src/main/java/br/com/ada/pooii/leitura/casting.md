@@ -54,7 +54,6 @@ Ocorre quando uma classe filha é automaticamente tratada como sua superclasse, 
 class Animal {}
 class Gato extends Animal {}
 
-// metodo main
 Animal animal = new Gato();
 ```
 
