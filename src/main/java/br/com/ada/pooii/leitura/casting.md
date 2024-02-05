@@ -22,7 +22,6 @@ Nesse exemplo, não precisamos informar ao Java sobre o _casting_ porque não h�
 * O tamanho de um _`double`_ é maior que _`int`_
 * O tamanho de um _`double`_ é maior que _`float`_
 * O tamanho de um _`long`_ é maior que um _`int`_
-* 
 
 **_Declarando e atribuindo variaveis_**
 ```java
