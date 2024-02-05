@@ -29,7 +29,7 @@ Nesse exemplo, não precisamos informar ao Java sobre o _casting_ porque não h�
 int numeroInteiro = 123;
 long numeroLongo = numeroInteiro;
 
-// imprimindo o valor de numeroLong
+// imprimindo o valor de numeroLongo
 System.out.println(numeroLongo); // 123
 
 ```
