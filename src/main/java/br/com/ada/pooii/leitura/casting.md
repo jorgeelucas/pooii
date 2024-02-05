@@ -44,7 +44,7 @@ Muitas vezes utilizamos `Casting` implícito sem perceber quando fazemos o segui
 long numero = 123;
 ```
 
-Isso ocorre porque quando declaramos um valor literal, como 123, o Java o interpreta como um inteiro. Se quisermos declará-lo como long, devemos incluir a letra L ao final do número, como no exemplo a seguir:
+Isso ocorre porque quando declaramos um valor literal, como 123, o Java o interpreta como um inteiro. Se quisermos declará-lo como long, devemos incluir a letra L ao final do número.
 
 **_Casting Implícito com Objetos_**
 
