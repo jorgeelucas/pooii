@@ -6,7 +6,7 @@ Em Java, usamos o conceito de _`Casting`_ quando desejamos converter um tipo de 
 
 ## Casting implícito
 
-> O Casting implícito ocorre quando o próprio Java realiza a conversão automaticamente. Por exemplo:
+> O Casting implícito ocorre quando o próprio Java realiza a conversão automaticamente.
 
 
 **_Exemplo_**
